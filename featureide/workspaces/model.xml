@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<featureModel>
+	<properties>
+		<graphics key="autolayoutconstraints" value="false"/>
+		<graphics key="legendposition" value="1452,-35"/>
+		<graphics key="legendautolayout" value="false"/>
+		<graphics key="showconstraints" value="true"/>
+		<graphics key="showshortnames" value="false"/>
+		<graphics key="layout" value="vertical"/>
+		<graphics key="showcollapsedconstraints" value="true"/>
+		<graphics key="legendhidden" value="false"/>
+		<graphics key="layoutalgorithm" value="6"/>
+	</properties>
+	<struct>
+		<and abstract="true" mandatory="true" name="Robots">
+			<graphics key="collapsed" value="false"/>
+			<and name="Save-data">
+				<graphics key="collapsed" value="false"/>
+				<and name="Round">
+					<graphics key="collapsed" value="false"/>
+					<feature name="EnemyPos"/>
+					<feature name="EnemyMovement"/>
+					<feature name="EnemyGun"/>
+				</and>
+				<feature name="Match"/>
+			</and>
+			<and mandatory="true" name="Body">
+				<graphics key="collapsed" value="false"/>
+				<feature mandatory="true" name="BodyColor"/>
+			</and>
+			<and name="Radar">
+				<graphics key="collapsed" value="false"/>
+				<feature name="infinityLock"/>
+				<feature name="Spinning"/>
+			</and>
+			<and name="Targeting">
+				<graphics key="collapsed" value="false"/>
+				<feature name="LinearTargeting"/>
+				<feature name="DynamicClustering"/>
+				<feature name="Head-On"/>
+				<feature name="Random"/>
+				<and name="GFTargeting">
+					<graphics key="collapsed" value="false"/>
+					<feature name="VCS"/>
+					<feature name="DistanceSegments"/>
+					<feature name="EnemyWall"/>
+					<feature name="EnemyAcceleration"/>
+					<feature name="LaterVelocity"/>
+					<feature name="EnemyAbsoluteVelocity"/>
+				</and>
+				<feature name="Circular"/>
+				<feature name="Swarm"/>
+				<feature name="AveragedBearingOffset"/>
+				<and name="PatternMatching">
+					<graphics key="collapsed" value="false"/>
+					<feature name="MultipleChoice"/>
+					<feature name="Symbolic"/>
+				</and>
+				<feature name="DisplacementVector"/>
+			</and>
+			<and name="Gun">
+				<graphics key="collapsed" value="false"/>
+				<feature name="PlayItForward"/>
+				<feature name="Angular"/>
+				<feature name="DistanceTargeting"/>
+				<feature name="DistancePower"/>
+			</and>
+			<and mandatory="true" name="EnergyManagement">
+				<graphics key="collapsed" value="false"/>
+				<feature name="MaxBp"/>
+				<feature name="EnemyEnergy"/>
+				<feature name="Conversation"/>
+			</and>
+			<and abstract="true" name="Movement">
+				<graphics key="collapsed" value="false"/>
+				<feature name="Pattern"/>
+				<and name="RandomMovement">
+					<graphics key="collapsed" value="false"/>
+					<feature name="TimeBased"/>
+				</and>
+				<feature name="StopAndGo"/>
+				<feature name="MusashiTrick"/>
+				<feature name="Ramming"/>
+				<feature name="CornerManagement"/>
+				<feature name="AntiGravity"/>
+				<feature name="Oscillation"/>
+				<feature name="MinimumRisk"/>
+				<and name="WaveSurfing">
+					<graphics key="collapsed" value="false"/>
+					<feature name="PrecisePrediction"/>
+					<feature name="VCS-WaveSurfing"/>
+				</and>
+				<feature name="GuessFactorMovement"/>
+			</and>
+			<and name="Select-Enemy">
+				<graphics key="collapsed" value="false"/>
+				<feature name="SelectCurrent"/>
+				<feature name="SelectWeakest"/>
+				<feature name="SelectClosest"/>
+			</and>
+		</and>
+	</struct>
+</featureModel>
